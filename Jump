@@ -1,0 +1,15 @@
+local args = {
+    [1] = "Enter",
+    [2] = "2021Avanza15CVT"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("NetworkContainer"):WaitForChild("RemoteEvents"):WaitForChild("Minigames"):FireServer(unpack(args))
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4991, 20.7, 883.3)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+while true do wait()
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end
